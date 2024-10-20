@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attrition Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center">Attrition Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required>
+
+        <label for="Monthly_Rate">Monthly Rate:</label>
+        <input type="number" id="Monthly_Rate" name="Monthly_Rate" required>
+
+        <label for="Ennvironment_Satisfaction">Ennvironment Satisfaction:</label>
+        <input type="number" id="Ennvironment_Satisfaction" name="Ennvironment_Satisfaction" required>
+		
+		<label for="Job_Involvemnt">Job Involvemnt:</label>
+        <input type="number" id="Job_Involvemnt" name="Job_Involvemnt" required>
+
+		<label for="Standard_Hours">Standard Hours:</label>
+        <input type="number" id="Standard_Hours" name="Standard_Hours" required>
+
+		<label for="Performance_Rate">Performanc Rate:</label>
+        <input type="number" id="Performance_Rate" name="Performance_Rate" required>
+
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
